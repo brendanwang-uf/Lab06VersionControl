@@ -7,6 +7,9 @@ def encode(password):
         encoded_password += str(new_value)
     return encoded_password
 
+def decode(encoded_password):
+    pass
+
 def main():
     while True == True: #loops the menu
         print("""
@@ -23,10 +26,10 @@ Menu
             password = input("Please enter your password to encode: ") #asks for intial password
             encoded_password_storage = encode(password)
             print("Your password has been encoded and stored!")
-            pass
 
         if menu_option == "2":
-            #decode
+            decoded_password_storage = decode(encoded_password_storage)
+            print(f"The encoded password is {encoded_password_storage}, and the original password is {decoded_password_storage}.")
             pass
 
         if menu_option == "3":
