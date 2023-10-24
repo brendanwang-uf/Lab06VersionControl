@@ -3,8 +3,8 @@
 def encode(password):
     encoded_password = '' #empty string for password
     for value in password:
-        new_digit = (int(value) + 3) % 10  #shifts each digit up by 3 & wraps around the 10
-        encoded_password += str(new_digit)
+        new_value = (int(value) + 3) % 10  #shifts each digit up by 3 & wraps around the 10
+        encoded_password += str(new_value)
     return encoded_password
 
 def main():
