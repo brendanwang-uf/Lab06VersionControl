@@ -1,5 +1,3 @@
-#Brendan Wang
-
 def encode(password):
     encoded_password = '' #empty string for password
     for value in password:
@@ -7,8 +5,14 @@ def encode(password):
         encoded_password += str(new_value)
     return encoded_password
 
+
 def decode(encoded_password):
-    pass
+    decoded_password = ""
+    for value in encoded_password:
+        orig_digit = (int(value) - 3) % 10  #subtract 3 from each digit
+        decoded_password += str(orig_digit)
+    return decoded_password
+
 
 def main():
     while True == True: #loops the menu
@@ -23,7 +27,7 @@ Menu
         menu_option = input("Please enter an option: ")
 
         if menu_option == "1":
-            password = input("Please enter your password to encode: ") #asks for intial password
+            password = input("Please enter your password to encode: ") #asks for initial password
             encoded_password_storage = encode(password)
             print("Your password has been encoded and stored!")
 
