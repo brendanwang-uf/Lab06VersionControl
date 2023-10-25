@@ -1,3 +1,5 @@
+#Brendan Wang
+
 def encode(password):
     encoded_password = '' #empty string for password
     for value in password:
